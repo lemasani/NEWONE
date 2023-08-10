@@ -38,9 +38,3 @@
 </html>
 
 
-<?php
-
-if(isset($_POST["tanesco"]))
-
-header("location: index.php")
-?>

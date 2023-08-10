@@ -5,6 +5,8 @@
     width: 100%;
     top: 0px;
     background: #F1C93B;
+    height: 100px;
+    z-index: 2;
     }
 .navbar, .brand-name{
    text-decoration: none;

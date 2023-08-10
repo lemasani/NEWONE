@@ -9,6 +9,7 @@
     <style><?php include "Assets\css\main.css"; ?></style>
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   </head>
   <body>
     <div class="form-wrap">
@@ -33,7 +34,7 @@
                       <button class="btn-login">Login</button>
                   
                   </div>
-                    <a href="#" class="forget-password">forgot password</a>
+                    <a href="includes/sidebar.php" class="forget-password">forgot password</a>
               </div>
           </form>
           </div>
@@ -42,7 +43,7 @@
 
       </div>
     </div>
-    
+    <a href="includes/sidebar.php">sidebar</a>
    
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
