@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap');
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background: #F1C93B;
+    }
+.navbar, .brand-name{
+   text-decoration: none;
+   color: white;
+   font-size: 40px;
+   font-family:"family=Almarai";
+   letter-spacing: 2px;
+       
+}
