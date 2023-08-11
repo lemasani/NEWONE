@@ -78,8 +78,7 @@
             </div>
         </div>
         <div class="col py-3">
-            Content area...
-            <p>locale_accept_from_http</p>
+           content area
 
         
         </div>
