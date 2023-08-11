@@ -14,10 +14,10 @@
   </head>
   <body>
     <header class="header">
-    <nav class="navbar ">
+    <nav class="navbar bg-body-tertiary shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-            <img src="#" alt="Bootstrap" width="30" height="24">
+            <img src="../Assets/images/logo.png" alt="Logo" width="90" height="80">
             </a>
           
            

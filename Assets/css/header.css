@@ -4,13 +4,13 @@
     position: fixed;
     width: 100%;
     top: 0px;
-    background: #F1C93B;
+    
     height: 100px;
     z-index: 2;
     }
 .navbar, .brand-name{
    text-decoration: none;
-   color: white;
+   color: #1A5D1A;
    font-size: 40px;
    font-family:"family=Almarai";
    letter-spacing: 2px;
