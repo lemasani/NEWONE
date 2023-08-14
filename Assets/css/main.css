@@ -20,8 +20,8 @@ body{
     top: 50%;
     transform: translateY(-50%);
 }
-.form-wrap, h3{
-    font-family:"family=Almarai";
+.form-wrap, img{
+    margin-bottom: 15px;
     text-align: center;
 }
 .login-form{
@@ -49,4 +49,11 @@ input[type="text"], input[type="password"]{
 
 .forget-password{
     color: white;
+}
+
+.validation{
+    width: 300px;
+    position: absolute;
+    left: 700px;
+    top: 650px;
 }
