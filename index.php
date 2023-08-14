@@ -76,7 +76,7 @@ if(isset($_POST["login"]))
     $_SESSION["staff"]= $_POST["staff"];
     $_SESSION["password"] = $_POST["password"];
 
-    header("Location: includes/sidebar.php" );
+    header("Location: includes/header.php" );
 
   }
 
