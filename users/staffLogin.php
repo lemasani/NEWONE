@@ -14,11 +14,7 @@ session_start();
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
-      rel="stylesheet"
-    />
+    
   </head>
   <body>
     <div class="form-wrap">
@@ -31,12 +27,10 @@ session_start();
               <img src="..\Assets\images\logo.png" alt="logo" width="100px">
                   <div class="row">
                       
-                          <input type="text" placeholder="Employee ID" name="staff">                                              
-                     
-                  </div>
+                          <input type="text" placeholder="Employee ID" name="staff_id">  
                   <div class="row">
                       
-                        <input type="password" name="password" id="spassword" placeholder="Password">
+                        <input type="password" name="staff_password" id="spassword" placeholder="Password">
                     
                   </div>
                   <div class="row">
@@ -53,12 +47,7 @@ session_start();
           
       </div>
     </div>
-    <!-- MDB -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
-    ></script>
-   
+  
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
@@ -81,7 +70,8 @@ if(isset($_POST["login"]))
   }
 
 else{
-  echo'<div class="validation align-self-center data-mdb-toggle="animation" data-mdb-animation="fade-in-up"">
+  echo'
+  <div class="w-50 ml-0 mr-0 mx-auto d-flex align-items-center justify-content-center">
   <div class="container">
   <div class="alert alert-danger text-center" role="alert">
      fill the fields before login.
@@ -89,7 +79,8 @@ else{
 
       
   </div>
-</div>';
+</div>
+ ';
 }
 
 
