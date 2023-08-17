@@ -1,3 +1,7 @@
+<?php 
+ include("connect.php")
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -28,7 +32,7 @@
               </div>
               <div class="col-md-6 col-lg-6 d-flex flex-column">
                   <label for="type">Type</label>
-                  <select name="incident type" id="type">            
+                  <select name="incident" id="type">            
                     <option value="damages">Damages</option>
                     <option value="theft">Theft</option>
                     <option value="intrusion">Intrusion</option>                    
