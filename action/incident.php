@@ -1,9 +1,6 @@
-<?php
-include("connect.php")
-
+<?php 
+ include("connect.php")
 ?>
-
-
 
 <!doctype html>
 <html lang="en">
@@ -63,13 +60,37 @@ include("connect.php")
                 <input type="text" id="street"name="street">
               </div>
             </div>
+            <fieldset class="offender-details p-2">
+                <div class="row">
+                
+                <div class="col-md-3 d-flex flex-column">
+                    <label for="national_id">NIDA NUMBER:</label>
+                    <input type="text" name="national_id" id="national_id">
+                </div>
+            
+                <div class="col-md-3 d-flex flex-column">
+                    <label for="type">Action</label>
+                    <select name="incident_type" id="type">            
+                        <option value="damages">Don't Hire</option>
+                        <option value="theft">Arrest</option>
+                        <option value="intrusion">Terminate</option>                    
+                    </select>
+                </div>
 
-            <div class="row">
-              <div class="col-md-4 d-flex flex-column">
-                <label for="national_id">NIDA NUMBER:</label>
-                <input type="text" name="national_id" id="national_id">
-              </div>
-            </div>
+                <div class="col-md-4 d-flex flex-column">
+                    <label for="recommendation">Recommendation</label>
+                    <textarea name="c_recommendation" id="recommendation" class="w-100" placeholder="Give recommendation"></textarea>
+                </div>
+
+                <div class="col-md-2 align-self-center">
+                    <button class="btn btn-success">Add</button>
+                </div>
+                </div>
+            </fieldset>
+           
+               
+              
+           
 
 
             <div class="row">
