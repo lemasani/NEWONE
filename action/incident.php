@@ -16,9 +16,9 @@
 
   <body>
 
-<?php include "..\includes\header.php" ?>
+  <?php include "..\includes\header.php"; ?>
 
-  <form action="" method="post" class="incident-form">
+  <form action="connect.php" method="post" class="incident-form">
     <div class="container">
             <div class="row  d-flex justify-content-center">
               <div class="col-md-4 col-lg-6 text-center">
