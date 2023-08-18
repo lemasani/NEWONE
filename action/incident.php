@@ -1,6 +1,12 @@
-<?php 
- include("connect.php")
+
+<?php
+
+include("connect.php");
+
+
 ?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -17,8 +23,8 @@
   <body>
 
   <?php include "..\includes\header.php"; ?>
-
-  <form action="connect.php" method="post" class="incident-form">
+  
+  <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post" class="incident-form">
     <div class="container">
             <div class="row  d-flex justify-content-center">
               <div class="col-md-4 col-lg-6 text-center">
@@ -32,7 +38,8 @@
               </div>
               <div class="col-md-6 col-lg-6 d-flex flex-column">
                   <label for="type">Type</label>
-                  <select name="incident" id="type">            
+                  <select name="incident" id="type"> 
+                    <option value=""></option>           
                     <option value="damages">Damages</option>
                     <option value="theft">Theft</option>
                     <option value="intrusion">Intrusion</option>                    
@@ -112,3 +119,70 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
+<?php
+if($_SERVER['REQUEST_METHOD']=='POST') {
+
+
+$title = $_POST['title'];
+$incident = $_POST['incident'];
+$description = $_POST['description'];
+$region = $_POST['region'];
+$district= $_POST['district'];
+$street = $_POST['street'];
+
+
+
+if(empty($title) )
+{
+echo"fill the title first";
+}
+
+elseif(empty($incident))
+{
+  echo"provide the incident type";
+}
+elseif(empty($description))
+{
+echo"fill in the description";
+}
+elseif(empty($region))
+{
+  echo"provide region";
+}
+elseif(empty($district))
+ {
+  echo"provide district";
+}
+elseif(empty($street))
+{
+  echo"provide street/ward";
+}
+
+
+
+
+else
+{
+  
+$sql = "insert into `incident_db`(title,incident,description,region,district,street)
+values('$title','$incident',' $description','$region','$district','$street')";
+
+
+
+$result = mysqli_query($con,$sql);
+
+if($result)
+{
+
+   $title = $_POST['title'];
+   $incident = $_POST['incident'];
+   $description = $_POST['description'];
+   $region = $_POST['region'];
+   $district= $_POST['district'];
+   $street = $_POST['street'];
+
+   echo"data inserted";
+}
+}
+}
+?>
