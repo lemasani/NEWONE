@@ -35,25 +35,22 @@ include("connect.php");
               <img src="..\Assets\images\logo.png" alt="logo" width="100px">
                   <div class="row">
                       
-                          <input type="text" placeholder="contractor ID" name="id">   <br>                                           
+                          <input type="text" placeholder="Company name" name="company_name">                                              
                      
                   </div>
                   <div class="row">
                       
-                        <input type="password" name="pass" id="staff_password" placeholder="Password">
+                        <input type="password" name="project_id" id="spassword" placeholder="Password">
                     
                   </div>
                   <div class="row">
                    
-                      <input type="submit" name="submit" value="login" class="btn-login" >
+                      <input type="submit" name="login" value="login" class="btn-login" >
                   
                   </div>
                     <a href="#" class="forget-password">forgot password</a>
               </div>
           </form>
-
-
-
           </div>
         </div>
          
@@ -68,44 +65,5 @@ include("connect.php");
    
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
- 
- <script>
-
-function isvalid(){
-
-
-var id = document.form.id.value;
-var pass = document.form.pass.value;
-if(id.length =="" && pass.length=="")
-{
-  alert("id or password field is empty");
-  return false;
-}
-else
-{
-  if(id.length =="")
-{
-  alert("id field is empty");
-  return false;
-}
-
-if(pass.length=="")
-{
-  alert(" password field is empty");
-  return false;
-}
-}
-
-
-}
-
-
-
-
- </script>
- 
   </body>
 </html>
-
-
-

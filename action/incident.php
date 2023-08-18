@@ -1,9 +1,5 @@
-
-<?php
-
-include("connect.php");
-
-
+<?php 
+ include("connect.php");
 ?>
 
 
