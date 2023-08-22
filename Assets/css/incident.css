@@ -3,7 +3,9 @@
 
 .incident-form{
     position: relative;
-    top: 200px;
+    top:-590px;
+    left: 100px;
+    z-index: 2;
    
 }
 .date{
