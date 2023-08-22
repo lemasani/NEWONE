@@ -23,7 +23,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
-    <?php include "header.php" ?>
+  <header class="header">
+        <nav class="navbar bg-body-tertiary shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.php">
+                <img src="../Assets/images/logo.png" alt="Logo" width="90" height="80">
+                </a>
+              
+              
+                <a href="../index.php" class="brand-name">Newone</a>
+
+            </div>
+        </nav>
+        
+       
+   </header>
     <div class="container-fluid" style="margin-top:5px;">
             <div class="row">
 
