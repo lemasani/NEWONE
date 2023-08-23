@@ -13,56 +13,31 @@ session_start();
     <title>Tanesco-Security</title>
 
     <!-- custom css -->
-    
-    <style><?php include "..\Assets\css\header.css"; ?></style>
     <style>
-            .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 3;
-        top: 0;
-        left: 0;
-        background-color: #1A5D1A;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
+      body{
+        overflow: hidden;
+      }
+        .sidebar{
+            height: 90vh;
+            position: relative;
+            top: 100px;
         }
 
-        .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: white;
-        display: block;
-        transition: 0.3s;
+        .nav-link{
+          font-size: 50px;
         }
-
-        .sidenav a:hover {
-        color: #f1f1f1;
-        }
-
-        .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-        }
-
-        @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
-        }
-</style>
+       
+    </style>
+    <style><?php include "..\Assets\css\header.css"; ?></style>
+    
     <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
     <header class="header">
         <nav class="navbar bg-body-tertiary shadow-sm">
             <div class="container">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
                 <a class="navbar-brand" href="index.php">
                 <img src="../Assets/images/logo.png" alt="Logo" width="90" height="80">
                 </a>
@@ -72,26 +47,31 @@ session_start();
 
             </div>
         </nav>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="#">Status</a>
-          <a href="#">Incidenct</a>
-          <a href="#">Project</a>
-          <a href="#">Sign Out</a>
-        </div>
+        
        
    </header>
+   <div class="container-fluid" style="margin-top:5px;">
+            <div class="row">
 
-
-   <script>
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    }
-
-    function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    }
-</script>
+                <nav class="col-sm-2 bg-light sidebar py-5 px-3"><!-- start side bar -->
+                     <div class="sidebar-sticky align-center">
+                     <ul class="nav flex-column">
+                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-card-text me-2"></i>Dashboard</a>
+                     </li>
+                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-building-exclamation"></i>Incident</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-app-indicator me-2"></i>Status</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-kanban"></i>Project</a>
+                    </li>
+                    
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-box-arrow-left me-2"></i>Log out</a>
+                    </li>
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+    </div>
     <!-- bootstrap script link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
