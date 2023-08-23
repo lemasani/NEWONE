@@ -68,7 +68,7 @@
               <input type="text" disabled>
             </div>
         </div>
-        <div class="row d-flex">
+        <div class="row d-flex justify-content-between ">
             <div class="col-md-3">
               <label for="">Region</label>
               <input type="text" disabled>
