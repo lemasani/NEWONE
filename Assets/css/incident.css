@@ -3,10 +3,10 @@
 
 .incident-form{
     position: relative;
-    top:-590px;
-    left: 100px;
-    z-index: 2;
-   
+    top:-570px;
+    margin-left: 400px;
+    z-index: 1;
+    width: 70%;
 }
 .date{
     margin-bottom: 20px;

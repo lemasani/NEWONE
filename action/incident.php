@@ -110,12 +110,12 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
                         <span class="date">Date: </span>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-6 col-lg-6 d-flex flex-column">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-3 col-lg-3 d-flex flex-column">
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" value=" <?php echo $title ?>">
               </div>
-              <div class="col-md-6 col-lg-6 d-flex flex-column">
+              <div class="col-md-3 col-lg-3 d-flex flex-column">
                   <label for="type">Type</label>
                   <select name="incident" id="type" value=" <?php echo  $incident ?>"> 
                     <option value=""></option>           
@@ -125,36 +125,36 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
                   </select>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12 d-flex flex-column">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-6 d-flex flex-column">
                 <label for="description">Description</label>
                 <textarea name="description" id="description" class="w-100" placeholder="Enter description" value=" <?php echo $description ?>"></textarea>
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-md-3 d-flex flex-column">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-2 d-flex flex-column">
                 <label for="region">Region:</label>
                 <input type="text" id="region" name="region" value="<?php echo $region ?>" >
               </div>
-              <div class="col-md-3 d-flex flex-column">
+              <div class="col-md-2 d-flex flex-column">
                 <label for="district">District</label>
                 <input type="text" id="district" name="district" value=" <?php echo $district ?>" >
               </div>
-              <div class="col-md-3 d-flex flex-column">
+              <div class="col-md-2 d-flex flex-column">
                 <label for="street">Street/ward</label>
                 <input type="text" id="street"name="street" value=" <?php echo $street ?>">
               </div>
             </div>
             <fieldset class="offender-details p-2">
-                <div class="row">
+                <div class="row d-flex justify-content-center">
                 
-                <div class="col-md-3 d-flex flex-column">
+                <div class="col-md-2 d-flex flex-column">
                     <label for="national_id">NIDA NUMBER:</label>
                     <input type="text" name="national_id" id="national_id">
                 </div>
             
-                <div class="col-md-3 d-flex flex-column">
+                <div class="col-md-1 d-flex flex-column">
                     <label for="type">Action</label>
                     <select name="incident_type" id="type">            
                         <option value="damages">Don't Hire</option>
@@ -163,29 +163,21 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
                     </select>
                 </div>
 
-                <div class="col-md-4 d-flex flex-column">
+                <div class="col-md-3 d-flex flex-column">
                     <label for="recommendation">Recommendation</label>
                     <textarea name="c_recommendation" id="recommendation" class="w-100" placeholder="Give recommendation"></textarea>
                 </div>
 
-                <div class="col-md-2 align-self-center">
-                    <button class="btn btn-success">Add</button>
-                </div>
                 </div>
             </fieldset>
            
-               
-              
-           
-
-
-            <div class="row">
-              <div class="col-md-12">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-6">
                 <input type="submit" value="submit" name="submit" class="btn-submit w-100">
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-6">
                 
               <?php echo $msg; ?>
               </div>
