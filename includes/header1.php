@@ -44,9 +44,9 @@
                 <nav class="col-sm-2 bg-light sidebar py-5 px-3"><!-- start side bar -->
                      <div class="sidebar-sticky align-center">
                      <ul class="nav flex-column">
-                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-card-text me-2"></i>Dashboard</a>
+                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="..\contractor\dashboard.php"><i class="bi bi-card-text me-2"></i>Dashboard</a>
                      </li>
-                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-people me-2"></i>Workforce</a>
+                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="..\contractor\workforce.php"><i class="bi bi-people me-2"></i>Workforce</a>
                     </li>
                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-app-indicator me-2"></i>Response</a>
                     </li>
