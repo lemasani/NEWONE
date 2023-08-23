@@ -60,3 +60,21 @@ input[type="text"], input[type="password"]{
     margin: auto;
     top: 250px;
 }
+
+.welcome{
+    position: relative;
+    top: 300px;
+    transform: translateY(50%);
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(8px); 
+}
+.welcome > h2{
+    color: white;
+    letter-spacing: 2px;
+}
+
+.wrapper{
+    color: white;
+    backdrop-filter: blur(8px);
+}

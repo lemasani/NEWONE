@@ -32,7 +32,47 @@ session_start();
     />
   </head>
   <body>
-    <div class="form-wrap">
+  <nav class="navbar bg-info shadow-sm">
+    <div class="container-fluid m-2">
+      <a class="navbar-brand fs-3 font-monospace d-flex" href="#">
+        <img src="Assets\images\logo.png" alt="Logo" width="80" height="50" class="d-inline-block align-text-top">
+      </a>
+      <h1>Tanesco</h1>
+      
+    </div>
+  </nav>
+      <div class="container">
+        <div class="welcome">
+          <h2>Welcome to Newone</h2>
+          <div class="login-info">
+            <a href="users\staffLogin.php" class="btn-login">Staff</a>
+            <a href="users\contractorLogin.php" class="btn-login">Contractor</a>
+          </div>
+        </div>
+      </div>
+    <footer class="footer fixed-bottom">
+      <div class="container">
+        <div class="wrapper d-flex justify-content-around text-center">
+          <h2>NEWONE</h2>
+          <small>&copy; Copyright 2023, Tanesc0_field</small>
+          <div class="admin">
+            <a href="">Admin</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+    ></script>
+   
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!-- <div class="form-wrap">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -50,14 +90,4 @@ session_start();
          
           
       </div>
-    </div>
-    <!-- MDB -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
-    ></script>
-   
-    <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
-</html>
+    </div> -->
