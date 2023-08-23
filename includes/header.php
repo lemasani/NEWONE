@@ -50,7 +50,7 @@ session_start();
         
        
    </header>
-   <div class="container-fluid" style="margin-top:5px;">
+   
             <div class="row">
 
                 <nav class="col-sm-2 bg-light sidebar py-5 px-3"><!-- start side bar -->
@@ -71,7 +71,7 @@ session_start();
                     </div>
                 </nav>
             </div>
-    </div>
+   
     <!-- bootstrap script link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
