@@ -1,6 +1,6 @@
 
 <?php
-include("connect.php");
+include("login.php");
 
 
 ?>
@@ -30,6 +30,7 @@ include("connect.php");
         <div class="row">
           <div class="col-lg-6">
           <form name="form" class="login-form" action="login.php" onsubmit="return isvalid()" method="post">
+          
               <div class="container">
               
               <img src="..\Assets\images\logo.png" alt="logo" width="100px">
@@ -40,12 +41,12 @@ include("connect.php");
                   </div>
                   <div class="row">
                       
-                        <input type="password" name="project_id" id="spassword" placeholder="Password">
+                        <input type="password" name="project_id" id="spassword" placeholder="Project id">
                     
                   </div>
                   <div class="row">
                    
-                      <input type="submit" name="login" value="login" class="btn-login" >
+                      <input type="submit" name="submit" value="login" class="btn-login" >
                   
                   </div>
                     <a href="#" class="forget-password">forgot password</a>
