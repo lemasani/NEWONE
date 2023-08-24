@@ -14,7 +14,9 @@
         z-index: 1;
         width: 70%;
       }
-     
+     input[type=button], input[type=submit]{
+        color: #fff;
+     }
 
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -30,6 +32,10 @@
                     <div class="col-md-4 d-flex flex-column">
                         <label for="project">Project name</label>
                         <input type="text" id="project" >
+                    </div>
+                    <div class="col-md-4 d-flex flex-column">
+                        <label for="id">Project ID</label>
+                        <input type="text" id="id" >
                     </div>
         
                     <div class="col-md-4 d-flex flex-column">
@@ -58,17 +64,20 @@
         <div class="row">
             <h4 class="title my-3">Worforce Details</h4>
             <div class="row">
-            <INPUT type="button" value="Add Row" onClick="addRow('dataTable')" />
-
-            <INPUT type="button" value="Delete Row" onClick="deleteRow('dataTable')" />
-                <form action="" method="post">
-                <TABLE width="425" border="1">
+                <div class="col-md-6">
+                    <INPUT type="button" value="Add" onClick="addRow('dataTable')" class="btn bg-success py-1 my-2" />
+                    <INPUT type="button" value="Delete" onClick="deleteRow('dataTable')" class="btn bg-danger py-1 my-2" />
+                </div>
+           
+                <form action="" method="post"  class="bg-light">
+                <TABLE  class="w-100">
                 <thead>
                 <tr>
-                <th width="98"></th>
-                <th width="94">NIDA</th>
-                <th width="121">Name</th>
-                <th width="84">Phone No</th>
+                <th width="10"></th>
+                <th width="121" class="text-center">NIDA</th>
+                <th width="121" class="text-center">First Name</th>
+                <th width="121" class="text-center">Last Name</th>
+                <th width="84" class="text-center">Phone No</th>
 
                 </tr>
                 </thead>
@@ -76,8 +85,13 @@
 
                 </tbody>
                 </TABLE>
-
-                <INPUT type="submit" value="Insert" name="submit" />
+                <div class="row d-flex justify-content-end">
+                    <div class="col-md-3">
+                        <INPUT type="submit" value="Submit" name="submit"class="btn bg-warning my-2 mx-5" />
+                    </div>
+                </div>
+                
+                
                 </form>
             </div>
         </div>
@@ -97,20 +111,23 @@
         cell1.appendChild(element1);
 
         var cell2 = row.insertCell(1);
-        cell2.innerHTML = "<input type='text' name='nida'>";
+        cell2.innerHTML = "<input type='text' class='w-100 py-1 my-2' name='nida'>";
 
         var cell3 = row.insertCell(2);
-        cell3.innerHTML = "<input type='text'  name='fname' />";
+        cell3.innerHTML = "<input type='text' class='w-100 py-1 my-2' name='fname' />";
 
         var cell4 = row.insertCell(3);
-        cell4.innerHTML =  "<input type='text'  name='phone' />";
+        cell4.innerHTML =  "<input type='text' class='w-100 py-1 my-2' name='lnamr' />";
+
+        var cell4 = row.insertCell(4);
+        cell4.innerHTML =  "<input type='text'class='w-100 py-1 my-2'' name='phoneNo' />";
         }
         function deleteRow(tableID) {
         try {
         var table = document.getElementById(tableID);
         var rowCount = table.rows.length;
 
-        for(var i=1; i<rowCount; i++) {
+        for(var i=0; i<rowCount; i++) {
             var row = table.rows[i];
             var chkbox = row.cells[0].childNodes[0];
             if(null != chkbox && true == chkbox.checked) {
