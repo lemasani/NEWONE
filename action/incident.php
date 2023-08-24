@@ -107,7 +107,7 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
     <div class="container">
             <div class="row  d-flex justify-content-center">
               <div class="col-md-4 col-lg-6 text-center">
-                        <span class="date">Date: </span>
+                        <span class="date">Date: <?= date('Y-m-d')?></span>
               </div>
             </div>
             <div class="row d-flex justify-content-center">
