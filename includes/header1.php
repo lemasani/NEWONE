@@ -48,7 +48,7 @@
                      </li>
                      <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="..\contractor\workforce.php"><i class="bi bi-people me-2"></i>Workforce</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-app-indicator me-2"></i>Response</a>
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="..\contractor\response.php"><i class="bi bi-app-indicator me-2"></i>Response</a>
                     </li>
                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-flag me-2"></i>Issues</a>
                     </li>
