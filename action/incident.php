@@ -8,6 +8,7 @@
 <html lang="en">
   <head>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Incident</title>
@@ -18,7 +19,7 @@
 
   <body>
 
-  <?php include "..\includes\header.php"; ?>
+  <!-- <?php include "..\includes\header.php"; ?> -->
   <?php
  $msg = '';
  $title = '';
@@ -26,7 +27,7 @@ $incident = '';
 $description = ''; 
 $region = '';
 $district = '';
-$street  = '';
+$ward  = '';
 
 if($_SERVER['REQUEST_METHOD']=='POST') {
 
@@ -36,7 +37,7 @@ $incident = $_POST['incident'];
 $description = $_POST['description'];
 $region = $_POST['region'];
 $district= $_POST['district'];
-$street = $_POST['street'];
+$ward = $_POST['ward'];
 
 
 if(empty($title) )
@@ -65,7 +66,7 @@ elseif(empty($district))
   global $msg;
 $msg = '<div class="alert alert-danger mt-2 text-center">Enter district</div>';
 }
-elseif(empty($street))
+elseif(empty($ward))
 {
   global $msg;
 $msg = '<div class="alert alert-danger mt-2 text-center">Enter street or ward</div>';
@@ -77,8 +78,8 @@ $msg = '<div class="alert alert-danger mt-2 text-center">Enter street or ward</d
 else
 {
   
-$sql = "insert into `incident_db`(title,incident,description,region,district,street)
-values('$title','$incident',' $description','$region','$district','$street')";
+$sql = "insert into `incident_db`(title,incident,description,region,district,ward)
+values('$title','$incident',' $description','$region','$district','$ward')";
 
 
 
@@ -92,7 +93,7 @@ if($result)
    $description = $_POST['description'];
    $region = $_POST['region'];
    $district= $_POST['district'];
-   $street = $_POST['street'];
+   $ward = $_POST['ward'];
 
    
    
@@ -135,15 +136,22 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
             <div class="row d-flex justify-content-center">
               <div class="col-md-2 d-flex flex-column">
                 <label for="region">Region:</label>
-                <input type="text" id="region" name="region" value="<?php echo $region ?>" >
+                <select name="region" id = "region" onchange="getDistrict()">
+                  <option value="">choose region</option>
+                  <?php get_region();?>
+                </select>
               </div>
               <div class="col-md-2 d-flex flex-column">
                 <label for="district">District</label>
-                <input type="text" id="district" name="district" value=" <?php echo $district ?>" >
+                <select name="district" id="district" onchange="getWard()">
+                <option value="">Choose District</option>
+                </select>
               </div>
               <div class="col-md-2 d-flex flex-column">
-                <label for="street">Street/ward</label>
-                <input type="text" id="street"name="street" value=" <?php echo $street ?>">
+                <label for="ward">Ward</label>
+                <select name="ward" id="street">
+                  <option value="">Choose ward</option>
+                </select>
               </div>
             </div>
             <fieldset class="offender-details p-2">
@@ -190,6 +198,35 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
 
   </form>
   
+  <script language="JavaScript" type="text/javascript">
+    
+    function getDistrict(){
+      var region = document.getElementById('region');
+      $.ajax({
+        url: 'connect.php',
+        type: 'post',
+        data: { "region_id": region.value},
+        success: function(response) {
+          $('#district').html(response);
+        }
+      });
+    }
+    function getWard(){
+      var district = document.getElementById('district');
+      $.ajax({
+        url: 'connect.php',
+        type: 'post',
+        data: { "district_id": district.value},
+        success: function(response) {
+          $('#street').html(response);
+        }
+      });
+    }
+    // $('#region').change(function(){ src="..\Assets\js\jquery-1.3.2.min.js"
+    //   alert('hello');
+    //   console.log('hello')
+    // });
+  </script>
 
 
 
