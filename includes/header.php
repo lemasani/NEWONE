@@ -58,7 +58,9 @@ session_start();
                      <ul class="nav flex-column">
                      <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-card-text me-2"></i>Dashboard</a>
                      </li>
-                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-building-exclamation"></i>Incident</a>
+                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="..\action\incident.php"><i class="bi bi-building-exclamation"></i>Incident</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="..\action\report.php"><i class="bi bi-building-exclamation"></i>Report</a>
                     </li>
                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-app-indicator me-2"></i>Status</a>
                     </li>
