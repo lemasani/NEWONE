@@ -221,11 +221,7 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
           $('#street').html(response);
         }
       });
-    }
-    // $('#region').change(function(){ src="..\Assets\js\jquery-1.3.2.min.js"
-    //   alert('hello');
-    //   console.log('hello')
-    // });
+    } 
   </script>
 
 
