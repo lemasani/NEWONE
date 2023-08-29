@@ -32,16 +32,47 @@ session_start();
     />
   </head>
   <body>
-  <nav class="navbar bg-info shadow-sm">
-    <div class="container-fluid m-2">
-      <a class="navbar-brand fs-3 font-monospace d-flex" href="#">
-        <img src="Assets\images\logo.png" alt="Logo" width="80" height="50" class="d-inline-block align-text-top">
+  <nav class="navbar navbar-expand-sm bg-success pl-5 shadow-sm fixed-top flex-md-nowrap p-0">
+    <!--<div class="container-fluid m-2">-->
+      <a class="navbar-brand fs-3 font-monospace d-flex" href="index.php">
+        <img src="Assets\images\logo.png" alt="Logo" width="70" height="35" class="d-inline-block align-text-top">
       </a>
-      <h1>Tanesco</h1>
+      <span class="navbar-text"><i>Tunaangaza maisha yako</i></span>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myMenu">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--<h1>Tanesco</h1>-->
+      <div class="collapse navbar-collapse" id="myMenu">
+          <ul class="navbar-nav pl-5 custom-nav">
+              <li class="nav-item"><a href="index.php" class="nav-link"><b>Home</b></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><b>Register</b></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><b>Login</b></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><b>Contact</b></a></li>
+          </ul>
+        </div>
       
-    </div>
+   <!-- </div> -->
   </nav>
+  <header>
+<!-- <div class="form-wrap"> 
       <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <form class="login-form" action="index.php" method="post">
+                <img src="Assets\images\logo.png" alt="logo" width="100px">
+                <div class="row">
+                    <a href="users\staffLogin.php" class="btn-login">login as staff</a> 
+                    <a href="users\contractorLogin.php" class="btn-login">login as contractor</a> 
+                </div> 
+            </form>
+          </div>
+        </div>         
+      </div>
+    </div> -->
+  </header>
+  <section>
+  <div class="container" id="Register">
+ <div class="col-md-6 offset-md-3">
         <div class="welcome">
           <h2>Welcome to Newone</h2>
           <div class="login-info">
@@ -49,18 +80,20 @@ session_start();
             <a href="users\contractorLogin.php" class="btn-login">Contractor</a>
           </div>
         </div>
-      </div>
-    <footer class="footer fixed-bottom">
-      <div class="container">
-        <div class="wrapper d-flex justify-content-around text-center">
-          <h2>NEWONE</h2>
-          <small>&copy; Copyright 2023, Tanesc0_field</small>
-          <div class="admin">
-            <a href="">Admin</a>
-          </div>
-        </div>
-      </div>
-    </footer>
+ </div>
+    </div>
+  </section>
+      <footer class="footer container-fluid mt-5 text-white fixed-bottom">
+            <div class="">
+            <div class="row py-2 d-flex justify-content-around text-center">
+                <div class="col-md-4 text-right">
+                    <small>&copy; Copyright 2023, Tanesco</small>
+                    <small class="ml-2"><a href="Admin/login.php">ONLINE</a></small>
+                </div>
+                </div>
+            </div>
+        
+        </footer>
 
     <!-- MDB -->
     <script
@@ -72,22 +105,4 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
-<!-- <div class="form-wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <form class="login-form" action="index.php" method="post">
-                <img src="Assets\images\logo.png" alt="logo" width="100px">
-                <div class="row">
-                    <a href="users\staffLogin.php" class="btn-login">login as staff</a> 
-                    <a href="users\contractorLogin.php" class="btn-login">login as contractor</a> 
-                </div>
-                
-            </form>
-          
-          </div>
-        </div>
-         
-          
-      </div>
-    </div> -->
+<!--  -->

@@ -14,7 +14,6 @@ body{
     height: 100vh;
     width: 100%;
 }
-
 .form-wrap{
     position: relative;
     top: 50%;
@@ -77,4 +76,44 @@ input[type="text"], input[type="password"]{
 .wrapper{
     color: white;
     backdrop-filter: blur(8px);
+}
+.navbar #myMenu .custom-nav .nav-item  a{
+    color: #fff; 
+} 
+.navbar #myMenu .custom-nav .nav-item  a:hover{
+    color: #3fd853;
+}
+footer{
+    width: 100%;
+    height: 6%;
+    background-color: rgb(32, 104, 32);
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    
+}
+.container{
+    
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+
+    height: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    right: 10;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+section{
+    height: 1vh;
+    position: relative;
+   
+
 }
