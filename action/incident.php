@@ -141,7 +141,7 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
                   <?php get_region();?>
                 </select>
               </div>
-              <div class="col-md-2 d-flex flex-column">
+              <div class="col-md-2 d-flex flex-column"> 
                 <label for="district">District</label>
                 <select name="district" id="district" onchange="getWard()">
                 <option value="">Choose District</option>
