@@ -31,3 +31,11 @@
     color: white;
    
 }
+
+.card-section{
+    position: relative;
+    top:-570px;
+    margin-left: 400px;
+    z-index: 1;
+    width: 70%;
+}
