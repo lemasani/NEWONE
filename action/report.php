@@ -1,3 +1,11 @@
+
+
+<?php 
+ include("connect.php");
+
+ $sql = "select * from incident_db ";
+$result = mysqli_query($con,$sql);
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,21 +24,32 @@
     <div class="card-section">
         <div class="card shadow-sm" style="">
         <div class="card-body">
-            <h5 class="card-title">Title: </h5>
+
+            <?php
+
+while($row = mysqli_fetch_assoc($result)){
+
+
+    ?>
+       
+            <h5 class="card-title">Title:<?php echo $row ['title']; ?></h5>
             
-            <p class="card-text my-2">Description: </p>
+            <p class="card-text my-2">Description:<?php echo $row ['description']; ?> </p>
             <div class="row d-flex my-5 ">
                 <div class="col-md-4">
-                    <p class="card-text">Region: </p>
+                    <p class="card-text">Region:<?php echo $row ['region']; ?> </p>
                 </div>
                 <div class="col-md-4">
-                    <p class="card-text">District: </p>
+                    <p class="card-text">District:<?php echo $row ['district']; ?> </p>
                 </div>
                 <div class="col-md-4">
-                    <p class="card-text">Ward: </p>
+                    <p class="card-text">Ward: <?php echo $row ['ward']; ?></p>
                 </div>                
             </div>
-            
+            <?php
+}
+?>
+
         </div>
         </div>
     </div>
