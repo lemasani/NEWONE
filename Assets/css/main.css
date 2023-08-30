@@ -77,6 +77,9 @@ input[type="text"], input[type="password"]{
     color: white;
     backdrop-filter: blur(8px);
 }
+nav{
+    background-color: rgb(32, 104, 32);
+}
 .navbar #myMenu .custom-nav .nav-item  a{
     color: #fff; 
 } 
@@ -114,6 +117,4 @@ footer{
 section{
     height: 1vh;
     position: relative;
-   
-
 }

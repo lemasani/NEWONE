@@ -51,21 +51,20 @@ include("connect.php");
     />
   </head>
   <body>
-
-  
-
-    <div class="form-wrap">
-      <div class="container">
+  <div class="mb-3 mt-5 text-center" style="font-size: 30px">
+  </div>
+    <div class="form-wrap justify-content-center custom-margin">
+      <div class="row ">
         <div class="row">
-          <div class="col-lg-6">
+         <div class="col-sm3 col-md-4">
           <form name="form" class="login-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-              <div class="container">
+              <div class="">
               
               <img src="..\Assets\images\logo.png" alt="logo" width="100px">
                   <div class="row">
                       
                           <input type="text" placeholder="Employee ID" name="id" value="<?php echo $id ?>"> 
-                          <span class="error"><?php echo $idErr;?></span>                                        
+                          <span class="error"><?php echo $idErr;?></span>                                
                      
                   </div>
                   <div class="row">
@@ -87,13 +86,9 @@ include("connect.php");
                     <a href="#" class="forget-password">forgot password</a>
               </div>
           </form>
-
-
-
-          </div>
-        </div>
          
-          
+         </div>
+        </div>  
       </div>
     </div>
     <!-- MDB -->
