@@ -20,10 +20,30 @@ $result = mysqli_query($con,$sql);
   </head>
 
     <?php include "..\includes\header.php"; ?> 
+    
+    <div class="report-result">
+        <div class="container">
+            <form action="" name="" class="import-report w-75">
 
+                <div class="row search w-50">
+                    <div class="col-md-4">
+                        <label for="from-data">From:</label>
+                        <input type="date" name="date" id="from-date">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="date">To:</label>
+                        <input type="date" name="date" id="end-date">
+                    </div>
+                    <input type="submit" value="Search" id="search" class="btn btn-success w-25">
+                </div>
+            </form>
+          
+        </div>
+    </div>
+  
 
     
 
   <body>
     
-  </body>
+  </body> 

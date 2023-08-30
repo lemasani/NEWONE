@@ -39,3 +39,15 @@
     z-index: 1;
     width: 70%;
 }
+
+.report-result{
+    position: relative;
+    top:-570px;
+    margin-left: 400px;
+    padding-top: 10px;
+}
+
+.search{
+    display: flex;
+    gap: 20px;
+}
