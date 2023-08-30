@@ -51,11 +51,33 @@ include("connect.php");
     />
   </head>
   <body>
-  <div class="mb-3 mt-5 text-center" style="font-size: 30px">
+    <div class="container mt-10 pt-10">
+    <div class="row">
+      <div class="col-12 col-sm-20 col-md-15 m-auto">
+        <div class="card border-0 shadow-2">
+           <div class="card-body">
+           <div class="mx-auto text-center">
+              <img src="..\Assets\images\logo.png" alt="logo" width="70px">            
+           </div>
+            <div class="row">
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  class="" name="form">
+                <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Username" value="<?php echo $id ?>">
+                <span class="error"><?php echo $idErr;?></span>  
+                <input type="password" name="pass" id="staff_password" class="form-control my-4 py-2" placeholder="Password">
+                <span class="error"><?php echo $passErr;?></span>
+                <div class="text-center mt-3">
+                  <button class="btn primary">Login</button>
+                  <a href="#" class="forget-password">Forgot password</a>
+                </div>
+              </form>
+           </div>
+        </div>
+      </div>
+    </div>
+    </div>
+ <!-- <div class="text-center">
   </div>
-    <div class="form-wrap justify-content-center custom-margin">
-      <div class="row ">
-        <div class="row">
+    <div class="text-center justify-content-center custom-margin">
          <div class="col-sm3 col-md-4">
           <form name="form" class="login-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
               <div class="">
@@ -86,11 +108,9 @@ include("connect.php");
                     <a href="#" class="forget-password">forgot password</a>
               </div>
           </form>
-         
-         </div>
         </div>  
-      </div>
-    </div>
+       </div>
+    </div> -->
     <!-- MDB -->
     <script
       type="text/javascript"
