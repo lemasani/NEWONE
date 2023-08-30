@@ -32,7 +32,7 @@ session_start();
     />
   </head>
   <body>
-  <nav class="navbar navbar-expand-sm bg-success pl-5 shadow-sm fixed-top flex-md-nowrap p-0">
+  <nav class="navbar navbar-expand-sm pl-5 shadow-sm fixed-top flex-md-nowrap p-0">
     <!--<div class="container-fluid m-2">-->
       <a class="navbar-brand fs-3 font-monospace d-flex" href="index.php">
         <img src="Assets\images\logo.png" alt="Logo" width="70" height="35" class="d-inline-block align-text-top">
