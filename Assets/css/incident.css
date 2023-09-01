@@ -51,3 +51,14 @@
     display: flex;
     gap: 20px;
 }
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}
+
+.table > tr{
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color: #D6EEEE;}

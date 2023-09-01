@@ -28,15 +28,30 @@ $result = mysqli_query($con,$sql);
                 <div class="row search w-50">
                     <div class="col-md-4">
                         <label for="from-data">From:</label>
-                        <input type="date" name="date" id="from-date">
+                        <input type="date" required name="date" id="from-date">
                     </div>
                     <div class="col-md-4">
                         <label for="date">To:</label>
-                        <input type="date" name="date" id="end-date">
+                        <input type="date" required name="date" id="end-date">
                     </div>
                     <input type="submit" value="Search" id="search" class="btn btn-success w-25">
                 </div>
             </form>
+
+
+            <div class="table my-4">
+                <table style="width:100%">
+                    <tr>
+                        <th  width="10px">#</th>
+                        <th  width="90px">Title</th>
+                        <th width="90px">Incident</th>
+                        <th width="100px">Region</th>
+                        <th  width="100px">District</th>
+                        <th  width="100px">Ward</th>
+                        <th  width="150px">Action</th>
+                    </tr>
+                </table>
+            </div>
           
         </div>
     </div>
