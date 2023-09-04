@@ -29,84 +29,43 @@
 
         <div class="row">
             <h4 class="title my-3">Worforce Details</h4>
-            <div class="row">
-                <div class="col-md-6">
-                    <INPUT type="button" value="Add" onClick="addRow('dataTable')" class="btn bg-success py-1 my-2" />
-                    <INPUT type="button" value="Delete" onClick="deleteRow('dataTable')" class="btn bg-danger py-1 my-2" />
-                </div>
+           
            
                 <form action="" method="post"  class="bg-light">
-                <TABLE  class="w-100">
-                <thead>
-                <tr>
-                <th width="10"></th>
-                <th width="121" class="text-center">NIDA</th>
-                <th width="121" class="text-center">First Name</th>
-                <th width="121" class="text-center">Last Name</th>
-                <th width="84" class="text-center">Phone No</th>
 
-                </tr>
-                </thead>
-                <tbody id="dataTable">
-
-                </tbody>
-                </TABLE>
-                <div class="row d-flex justify-content-end">
-                    <div class="col-md-3">
-                        <INPUT type="submit" value="Submit" name="submit"class="btn bg-warning my-2 mx-5" />
+                <div class="upload my-4 d-flex flex-column">
+                    <label for="workforce_file" class="my-1">Import</label>
+                    <input type="file" name="workforce_file" id="workforce_file">
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex flex-column my-4">
+                        <label for="NIDA">NIDA</label>
+                        <input type="text" name="nida" id="NIDA">
+                    </div>
+                    <div class="col-md-4 d-flex flex-column">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="firstname" id="fname">
+                    </div>
+                    <div class="col-md-4 d-flex flex-column">
+                        <label for="lname">last Name</label>
+                        <input type="text" name="lastname" id="lname">
+                    </div>
+                    <div class="col-md-4 d-flex flex-column">
+                        <label for="phone">Phone No</label>
+                        <input type="text" name="phone" id="phone">
+                    </div>
+                    <div class="col-md-4 d-flex flex-column my-4">
+                        <input type="submit" value="Submit" id="submit" class="btn btn-success">
                     </div>
                 </div>
+                
                 
                 
                 </form>
             </div>
         </div>
     </div>
-    <script>
-        function addRow(tableID) { 
-
-        var table = document.getElementById(tableID);
-
-        var rowCount = table.rows.length;
-        var row = table.insertRow(rowCount);
-
-        var cell1 = row.insertCell(0);
-        var element1 = document.createElement("input");
-        element1.type = "checkbox";
-        element1.name="chkbox[]";
-        cell1.appendChild(element1);
-
-        var cell2 = row.insertCell(1);
-        cell2.innerHTML = "<input type='text' class='w-100 py-1 my-2' name='nida'>";
-
-        var cell3 = row.insertCell(2);
-        cell3.innerHTML = "<input type='text' class='w-100 py-1 my-2' name='fname' />";
-
-        var cell4 = row.insertCell(3);
-        cell4.innerHTML =  "<input type='text' class='w-100 py-1 my-2' name='lnamr' />";
-
-        var cell4 = row.insertCell(4);
-        cell4.innerHTML =  "<input type='text'class='w-100 py-1 my-2'' name='phoneNo' />";
-        }
-        function deleteRow(tableID) {
-        try {
-        var table = document.getElementById(tableID);
-        var rowCount = table.rows.length;
-
-        for(var i=0; i<rowCount; i++) {
-            var row = table.rows[i];
-            var chkbox = row.cells[0].childNodes[0];
-            if(null != chkbox && true == chkbox.checked) {
-                table.deleteRow(i);
-                rowCount--;
-                i--;
-            }
-        }
-        }catch(e) {
-            alert(e);
-        }
-    }
-    </script>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   </body>
 </html>
