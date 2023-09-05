@@ -28,7 +28,9 @@ include("connect.php");
    $data = htmlspecialchars($data);
    return $data;
  }
+ 
  ?>
+
 
 
 
@@ -61,12 +63,12 @@ include("connect.php");
            </div>
             <div class="row">
               <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post"  class="" name="form">
-                <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Username" value="<?php echo $id ?>">
+                <input type="text" name="ids" id="" class="form-control my-4 py-2" placeholder="Username" value="<?php echo $id ?>">
                 <span class="error"><?php echo $idErr;?></span>  
                 <input type="password" name="pass" id="staff_password" class="form-control my-4 py-2" placeholder="Password">
-                <span class="error"><?php echo $passErr;?></span>
+               
                 <div class="text-center mt-3">
-                  <button class="btn primary">Login</button>
+                  <button class="btn primary" name ="submit">Login</button>
                   <a href="#" class="forget-password">Forgot password</a>
                 </div>
               </form>
@@ -75,6 +77,7 @@ include("connect.php");
       </div>
     </div>
     </div>
+    
  <!-- <div class="text-center">
   </div>
     <div class="text-center justify-content-center custom-margin">
@@ -112,6 +115,7 @@ include("connect.php");
        </div>
     </div> -->
     <!-- MDB -->
+    
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
