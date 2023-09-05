@@ -66,8 +66,9 @@ session_start();
                     </li>
                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-kanban"></i>Project</a>
                     </li>
-                    
-                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-box-arrow-left me-2"></i>Log out</a>
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-person"></i><?php echo $_SESSION['staff_id'];  ?></a>
+                   
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="..\users\logout.php"><i class="bi bi-box-arrow-left me-2"></i>Log out</a>
                     </li>
                     </ul>
                     </div>

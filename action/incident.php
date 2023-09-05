@@ -18,7 +18,7 @@
   </head>
 
   <body>
-
+  
   <?php include "..\includes\header.php"; ?> 
   <?php
  $msg = '';
@@ -193,7 +193,7 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
     </div>
             
 
-          
+   
 
 
   </form>

@@ -1,4 +1,6 @@
 <?php
+
+
 include("connect.php");
  // get the password input from the form
 
@@ -53,6 +55,8 @@ include("connect.php");
     />
   </head>
   <body>
+
+
     <div class="container mt-10 pt-10">
     <div class="row">
       <div class="col-12 col-sm-20 col-md-15 m-auto">

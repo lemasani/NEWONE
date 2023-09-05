@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
  $severname = "localhost";
  $username = "root";
  $password = "";
@@ -9,11 +12,11 @@ $db_name = "newone";
 
  
  if($con)
- {
+ {  
     
 if(isset($_POST['submit'])){
 
-   $staff_id = $_POST['id'];
+   $staff_id = $_POST['ids'];
    $password = $_POST['pass'];
    
    $sql = "select * from login_db where staff_id = '$staff_id'
@@ -21,9 +24,13 @@ if(isset($_POST['submit'])){
    
    $result  = mysqli_query($con, $sql);
    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-   $count = mysqli_num_rows($result);
-   
-   if($count==1)
+   if(is_array($row)){
+$_SESSION['staff_id'] = $_POST['ids'];
+$_SESSION['password'] = $_POST['pass'];
+
+
+   }
+   if(isset($_SESSION['staff_id']))
    {
        header("Location: ..\action\incident.php");}
    
