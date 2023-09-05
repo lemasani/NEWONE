@@ -1,10 +1,18 @@
 
 
 <?php 
- include("connect.php");
+ 
 
- $sql = "select * from incident_db ";
+ $con = new mysqli("localhost", "root","","newone");
+
+
+ if($con)
+
+{
+
+ $sql = "select * from incident_db";
 $result = mysqli_query($con,$sql);
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -50,6 +58,28 @@ $result = mysqli_query($con,$sql);
                         <th  width="100px">Ward</th>
                         <th  width="150px">Action</th>
                     </tr>
+                    <tr>
+                        <?php
+                        while($raw = mysqli_fetch_assoc($result))
+
+
+                        {
+                            ?>
+
+                            <td><?php echo $raw['id']; ?></td>
+                            <td><?php echo $raw['title']; ?></td>
+                            <td><?php echo $raw['incident']; ?></td>
+                            <td><?php echo $raw['region']; ?></td>
+                            <td><?php echo $raw['district']; ?></td>
+                            <td><?php echo $raw['ward']; ?></td>
+                            <td></td>
+                            </tr>
+                        <?php
+                        }
+
+                        ?>
+                    
+                    
                 </table>
             </div>
           

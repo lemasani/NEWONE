@@ -94,7 +94,7 @@ if($result)
    $region = $_POST['region'];
    $district= $_POST['district'];
    $ward = $_POST['ward'];
-
+ 
    
    
 $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully</div>';
@@ -108,7 +108,7 @@ $msg = '<div class="alert alert-success mt-2 text-center">Data sent successfully
     <div class="container">
             <div class="row  d-flex justify-content-center">
               <div class="col-md-4 col-lg-6 text-center">
-                        <span class="date">Date: <?= date('Y-m-d')?></span>
+                        <span class="date" name="inc_date">Date: <?= date('Y-m-d')?></span>
               </div>
             </div>
             <div class="row d-flex justify-content-center">
