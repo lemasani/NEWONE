@@ -1,7 +1,33 @@
 
 <?php
+
 include("login.php");
 
+// $idErr = $passErr  = "";
+// $id = $pass = "";
+// $msg = '';
+
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//   if (empty($_POST["company_name"])) {
+//     $idErr = '<div class="alert alert-danger text-center">Enter ID</div>';
+//   } else {
+//     $id = test_input($_POST["company_name"]);
+//   }
+  
+//   if (empty($_POST["project_id"])) {
+//     $passErr = '<div class="alert alert-danger  text-center">Enter Password</div>';
+//   } else {
+//     $pass = test_input($_POST["pass"]);
+//   }
+
+// }
+
+// function test_input($data) {
+//   $data = trim($data);
+//   $data = stripslashes($data);
+//   $data = htmlspecialchars($data);
+//   return $data;
+// }
 
 ?>
 
@@ -26,35 +52,30 @@ include("login.php");
   </head>
   <body>
     <div class="form-wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-          <form name="form" class="login-form" action="login.php" onsubmit="return isvalid()" method="post">
-          
-              <div class="container">
-              
-              <img src="..\Assets\images\logo.png" alt="logo" width="100px">
-                  <div class="row">
-                      
-                          <input type="text" placeholder="Company name" name="company_name">                                              
-                     
-                  </div>
-                  <div class="row">
-                      
-                        <input type="password" name="project_id" id="spassword" placeholder="Project id">
-                    
-                  </div>
-                  <div class="row">
-                   
-                      <input type="submit" name="submit" value="login" class="btn-login" >
-                  
-                  </div>
-                    <a href="#" class="forget-password">forgot password</a>
-              </div>
-          </form>
-          </div>
+    <div class="container mt-10 pt-10">
+    <div class="row">
+      <div class="col-12 col-sm-20 col-md-15 m-auto">
+        <div class="card border-0 shadow-2">
+           <div class="card-body">
+           <div class="mx-auto text-center">
+              <img src="..\Assets\images\logo.png" alt="logo" width="70px">            
+           </div>
+            <div class="row">
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" name="form">
+                <input type="text" name="company_name"  class="form-control my-4 py-2" placeholder="Company name" value="">
+                <span class="error"><?php if(!empty($namemsg)){echo $namemsg; } ?></span>  
+                <input type="password" name="project_id"  class="form-control my-4 py-2" placeholder="Password">
+                <span class="error"><?php if(!empty($passmsg)){echo $passmsg; } ?></span>
+                <div class="text-center mt-3">
+                <input type="submit" name="submit" value="login" class="btn-login" >
+                  <a href="#" class="forget-password">Forgot password</a>
+                </div>
+              </form>
+           </div>
         </div>
-         
+      </div>
+    </div>
+    </div>
           
       </div>
     </div>

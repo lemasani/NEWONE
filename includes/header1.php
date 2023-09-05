@@ -1,3 +1,7 @@
+<?php
+  
+  session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -52,8 +56,9 @@
                     </li>
                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-flag me-2"></i>Issues</a>
                     </li>
-                    
-                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-box-arrow-left me-2"></i>Log out</a>
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-person"></i><?php echo $_SESSION['company_name'] ?></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="..\users\logout.php"><i class="bi bi-box-arrow-left me-2"></i>Log out</a>
                     </li>
                     </ul>
                     </div>

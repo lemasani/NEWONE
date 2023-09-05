@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,6 +28,7 @@
     <div class="dashboard-cards">
     <div class="container">
     <div class="row d-flex justify-content-around ">
+    <h1 class="py-3">welcome <?php echo $_SESSION['company_name'] ?></h1>
       <div class="col-sm-3 mb-2 mb-sm-0 text-center">
         <div class="card shadow-lg p-3 mb-5 bg-warning">
           <div class="card-body">
