@@ -1,4 +1,10 @@
-<div class="row">
+<?php
+   session_start();
+   
+ if(empty($_SESSION['company_name'])){
+  header('location: ..\users\contractorLogin.php');
+ }
+?><div class="row">
             <div class="project-details">
                 <h4>Project details</h4>
                 <div class="row d-flex my-2">

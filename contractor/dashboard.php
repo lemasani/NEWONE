@@ -1,5 +1,9 @@
 <?php
    session_start();
+   
+ if(empty($_SESSION['company_name'])){
+  header('location: ..\users\contractorLogin.php');
+ }
 ?>
 <!doctype html>
 <html lang="en">
