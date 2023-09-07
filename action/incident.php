@@ -1,5 +1,9 @@
 <?php 
  include("connect.php");
+ session_start();
+ if(empty($_SESSION['staff_id'])){
+  header('location: ..\users\staffLogin.php');
+ }
 ?>
 
 
