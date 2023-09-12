@@ -1,18 +1,7 @@
-
-
 <?php 
- 
-
  $con = new mysqli("localhost", "root","","newone");
-
-
- if($con)
-
-{
-
  $sql = "select * from incident_db";
-$result = mysqli_query($con,$sql);
-}
+ $run = mysqli_query($con, $sql);
 ?>
 <!doctype html>
 <html lang="en">
@@ -31,25 +20,66 @@ $result = mysqli_query($con,$sql);
     
     <div class="report-result">
         <div class="container">
-            <form action="" name="" class="import-report w-75">
+            <form action="report.php" method="post" name="" class="import-report w-75">
 
                 <div class="row search w-50">
                     <div class="col-md-4">
                         <label for="from-data">From:</label>
-                        <input type="date" required name="date" id="from-date">
+                        <input type="date" required name="from_date" id="from-date">
                     </div>
                     <div class="col-md-4">
                         <label for="date">To:</label>
-                        <input type="date" required name="date" id="end-date">
+                        <input type="date" required name="To_date" id="end-date">
                     </div>
-                    <input type="submit" value="Search" id="search" class="btn btn-success w-25">
+                    <input type="submit" value="Search" id="search" name="search" class="btn btn-success w-25">
                 </div>
             </form>
+            <?php
+                if(isset($_POST['search'])){
+                    $from_date = $_POST['from_date'];
+                    $To_date = $_POST['To_date'];
+                    $query = mysqli_query($con, "select * from 
+                    incident_db where DATE(inc_date) between '$from_date' 
+                    and '$To_date'");
+                    
+                    if(mysqli_num_rows($query) > 0){?>
+                        
+                        <div class="table my-4 table-striped">
+                            <table style="width:100%">
+                                <thead>
+                                    <th  width="90px">Title</th>
+                                    <th width="90px">Incident</th>
+                                    <th width="100px">Region</th>
+                                    <th  width="100px">District</th>
+                                    <th  width="100px">Ward</th>
+                                    <th  width="150px">Action</th>
+                                </thead>
+                                <tbody>
+                                <?php foreach($query as $value){?>
+                                    <tr>
+                                        <td><?=$value['title'] ?></td>
+                                        <td><?=$value['incident'] ?></td>
+                                        <td><?=$value['region'] ?></td>
+                                        <td><?=$value['district'] ?></td>
+                                        <td><?=$value['ward'] ?></td>
+                                    </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    <?php
+                    }else{
+                        echo "no data found";
+                    }
+                    }else{
+                       
+                    
+                
 
-
-            <div class="table my-4">
+            ?>
+            <div class="table my-4 table-striped">
                 <table style="width:100%">
-                    <tr>
+                    <thead>
                         <th  width="10px">#</th>
                         <th  width="90px">Title</th>
                         <th width="90px">Incident</th>
@@ -57,38 +87,40 @@ $result = mysqli_query($con,$sql);
                         <th  width="100px">District</th>
                         <th  width="100px">Ward</th>
                         <th  width="150px">Action</th>
-                    </tr>
-                    <tr>
-                        <?php
-                        while($raw = mysqli_fetch_assoc($result))
+                    </thead>
+                    <tbody>
+                    <?php
+                        $i=1;
 
-
+                        while($row = mysqli_fetch_assoc($run))
                         {
                             ?>
-
-                            <td><?php echo $raw['id']; ?></td>
-                            <td><?php echo $raw['title']; ?></td>
-                            <td><?php echo $raw['incident']; ?></td>
-                            <td><?php echo $raw['region']; ?></td>
-                            <td><?php echo $raw['district']; ?></td>
-                            <td><?php echo $raw['ward']; ?></td>
+                            <tr>
+                            <td><?= $i; ?></td>
+                            <td><?= $row['title']; ?></td>
+                            <td><?= $row['incident']; ?></td>
+                            <td><?= $row['region']; ?></td>
+                            <td><?= $row['district']; ?></td>
+                            <td><?= $row['ward']; ?></td>
                             <td></td>
                             </tr>
                         <?php
-                        }
+                         $i++;  }
 
                         ?>
+                    </tbody>
+                       
                     
                     
                 </table>
             </div>
-          
+            <?php } ?>
         </div>
     </div>
   
 
     
 
-  <body>
+<body>
     
-  </body> 
+</body> 
