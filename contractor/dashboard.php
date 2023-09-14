@@ -1,6 +1,6 @@
 <?php
    session_start();
-   
+   include("connect.php");
  if(empty($_SESSION['company_name'])){
   header('location: ..\users\contractorLogin.php');
  }
@@ -22,7 +22,9 @@
         width: 70%;
       }
      
-
+      label{
+        font-weight: bold;
+      }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
@@ -37,7 +39,7 @@
         <div class="card shadow-lg p-3 mb-5 bg-warning">
           <div class="card-body">
             <h5 class="card-title">Workforce</h5>
-            <p class="card-text fs-2">60</p>
+            <p class="card-text fs-2"><?php echo $numberOfEmployees; ?></p>
             <a href="#" class="btn btn-success">View</a>
           </div>
         </div>
@@ -67,28 +69,29 @@
         <h5>Project info.</h5>
         <div class="row d-flex my-5">
             <div class="col-md-4">
-              <label for="">Project name</label>
-              <input type="text" disabled>
+              <label for="name">Project name: </label>
+              <span id="name"> <?=$row['name'];?></span>
+              
             </div>
     
             <div class="col-md-4">
-              <label for="">jurisdiction</label>
-              <input type="text" disabled>
+              <label for="">jurisdiction: </label>
+              <span> <?=$row['juridisction'];?></span>
             </div>
         </div>
         <div class="row d-flex justify-content-between ">
             <div class="col-md-3">
-              <label for="">Region</label>
-              <input type="text" disabled>
+              <label for="region">Region</label>
+              <span><?= get_region_name($row['region_id']);?></span>
             </div>
     
             <div class="col-md-3">
-              <label for="">District</label>
-              <input type="text" disabled>
+              <label for="district">District</label>
+              <span><?= get_district_name($row['district_id']);?></span>
             </div>
             <div class="col-md-3">
-              <label for="">Street</label>
-              <input type="text" disabled>
+              <label for="ward">Ward</label>
+              <span><?= get_ward_name($row['ward_id']);?></span>
             </div>
         </div>
       </div>
