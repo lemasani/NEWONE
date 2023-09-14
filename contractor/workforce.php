@@ -4,6 +4,7 @@
  if(empty($_SESSION['company_name'])){
   header('location: ..\users\contractorLogin.php');
  }
+ $company = $_SESSION['company_name'];
  
 ?>
 <!doctype html>
@@ -73,8 +74,8 @@ $msg = '<div class="alert alert-danger mt-2 text-center">Enter Phone number</div
 else
 {
   
-$sql = "insert into `workforce_tb`(national_id,w_first_name,w_last_name,Phone)
-values('$national_id','$w_first_name',' $w_last_name','$Phone')";
+$sql = "insert into `workforce_tb`(national_id,w_first_name,w_last_name,Phone,company)
+values('$national_id','$w_first_name',' $w_last_name','$Phone','$company')";
 
 
 

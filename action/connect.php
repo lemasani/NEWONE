@@ -2,7 +2,9 @@
 
 
  $con = new mysqli("localhost", "root","","newone");
-
+ 
+ $sql = "select * from incident_db";
+ $run = mysqli_query($con, $sql);
 
  if($con)
 

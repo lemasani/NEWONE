@@ -4,6 +4,8 @@
  if(empty($_SESSION['staff_id'])){
   header('location: ..\users\staffLogin.php');
  }
+
+ $staff = $_SESSION['staff_id'];
 ?>
 
 
@@ -82,8 +84,8 @@ $msg = '<div class="alert alert-danger mt-2 text-center">Enter street or ward</d
 else
 {
   
-$sql = "insert into `incident_db`(title,incident,description,region,district,ward)
-values('$title','$incident',' $description','$region','$district','$ward')";
+$sql = "insert into `incident_db`(title,incident,description,region,district,ward,staff)
+values('$title','$incident',' $description','$region','$district','$ward', '$staff')";
 
 
 
