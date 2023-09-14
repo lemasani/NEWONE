@@ -1,4 +1,6 @@
-<?php 
+<?php
+include("connect.php");
+
  $con = new mysqli("localhost", "root","","newone");
  $sql = "select * from incident_db";
  $run = mysqli_query($con, $sql);
@@ -59,9 +61,12 @@
                                     <tr>
                                         <td><?=$value['title'] ?></td>
                                         <td><?=$value['incident'] ?></td>
-                                        <td><?=$value['region'] ?></td>
-                                        <td><?=$value['district'] ?></td>
-                                        <td><?=$value['ward'] ?></td>
+                                        <td><?= get_region_name($value['region']) ?></td>
+                                        <td><?= get_district_name($value['district']) ?></td>
+                                        <td><?= get_ward_name($value['ward']) ?></td>
+                                        <td>
+                                            <a href="view.php?id=<?php echo $row['id'] ?>">View </a>
+                                        </td>
                                     </tr>
                                     <?php } ?>
                                 </tbody>
@@ -69,7 +74,7 @@
                         </div>
                     <?php
                     }else{
-                        echo "no data found";
+                        echo '<div class="alert alert-danger mt-2 w-75 text-center">NO DATA FOUND</div>';
                     }
                     }else{
                        
@@ -99,10 +104,12 @@
                             <td><?= $i; ?></td>
                             <td><?= $row['title']; ?></td>
                             <td><?= $row['incident']; ?></td>
-                            <td><?= $row['region']; ?></td>
-                            <td><?= $row['district']; ?></td>
-                            <td><?= $row['ward']; ?></td>
-                            <td></td>
+                            <td><?= get_region_name($row['region']) ?></td>
+                            <td><?= get_district_name($row['district']); ?></td>
+                            <td><?= get_ward_name($row['ward']); ?></td>
+                            <td>
+                                <a href="view.php?id=<?php echo $row['id'] ?>">View </a>
+                            </td>
                             </tr>
                         <?php
                          $i++;  }
