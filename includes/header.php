@@ -64,7 +64,7 @@ session_start();
                     </li>
                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-app-indicator me-2"></i>Status</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="#"><i class="bi bi-kanban"></i>Project</a>
+                    <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-4" href="..\Project\index.php"><i class="bi bi-kanban"></i>Project</a>
                     </li>
                     <li class="nav-item"><a class="nav-link text-success p-2 mt-4 fs-3" href="#"><i class="bi bi-person"></i><?php echo $_SESSION['staff_id'];  ?></a>
                    
